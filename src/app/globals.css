@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+/* Ocean Light Theme - Glassy Design System */
+:root {
+  /* Ocean Light Theme Colors */
+  --ocean-primary: #0891b2;
+  --ocean-primary-light: #06b6d4;
+  --ocean-primary-dark: #0e7490;
+  --ocean-secondary: #0ea5e9;
+  --ocean-accent: #3b82f6;
+  --ocean-surface: #f0f9ff;
+  --ocean-surface-light: #f8fafc;
+  --ocean-text: #0f172a;
+  --ocean-text-secondary: #475569;
+  --ocean-text-muted: #64748b;
+  --ocean-border: rgba(14, 116, 144, 0.15);
+  --ocean-glow: rgba(8, 145, 178, 0.25);
+  
+  /* Gradients */
+  --ocean-gradient: linear-gradient(135deg, #e0f2fe 0%, #e0e7ff 50%, #f0f9ff 100%);
+  --ocean-gradient-card: linear-gradient(135deg, rgba(240, 249, 255, 0.9) 0%, rgba(224, 242, 254, 0.85) 100%);
+  --ocean-shimmer: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%);
+}
+
+body {
+  background: var(--ocean-gradient);
+  background-attachment: fixed;
+  color: var(--ocean-text);
+  min-height: 100vh;
+}
+
+/* Glassy Component Styles */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(8, 145, 178, 0.1);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(8, 145, 178, 0.15);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 24px 0 rgba(8, 145, 178, 0.08);
+}
+
+.glass-ocean {
+  background: linear-gradient(135deg, 
+    rgba(224, 242, 254, 0.7) 0%, 
+    rgba(186, 230, 253, 0.6) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(8, 145, 178, 0.15);
+}
+
+/* Ocean Glow Effects */
+.ocean-glow {
+  box-shadow: 0 0 40px rgba(8, 145, 178, 0.2),
+              0 0 80px rgba(8, 145, 178, 0.1);
+}
+
+.ocean-glow-sm {
+  box-shadow: 0 0 20px rgba(8, 145, 178, 0.15);
+}
+
+/* Animated Background Blobs */
+.ocean-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.3;
+  z-index: -1;
+  animation: float 20s ease-in-out infinite;
+}
+
+.ocean-blob-1 {
+  background: linear-gradient(135deg, #bae6fd, #7dd3fc);
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  right: -100px;
+  animation-delay: 0s;
+}
+
+.ocean-blob-2 {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  width: 350px;
+  height: 350px;
+  bottom: -80px;
+  left: -80px;
+  animation-delay: 7s;
+}
+
+.ocean-blob-3 {
+  background: linear-gradient(135deg, #e0f2fe, #ddd6fe);
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 14s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+/* Shimmer Effect */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--ocean-shimmer);
+  animation: shimmer 3s infinite;
+}
+
+

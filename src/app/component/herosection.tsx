@@ -1,0 +1,104 @@
+"use client";
+
+import { Button } from "@mantine/core";
+import { IconArrowRight, IconSparkles } from "@tabler/icons-react";
+import Image from "next/image";
+
+export default function Hero() {
+  return (
+    <section className="pt-32 pb-24 relative overflow-hidden">
+      {/* Animated Ocean Background Blobs */}
+      <div className="ocean-blob ocean-blob-1" />
+      <div className="ocean-blob ocean-blob-2" />
+      <div className="ocean-blob ocean-blob-3" />
+
+      <div className="mx-auto max-w-7xl px-6 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          {/* LEFT CONTENT */}
+          <div>
+            {/* Highlight Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-light mb-6 ocean-glow-sm">
+              <IconSparkles size={16} className="text-cyan-600" />
+              <span className="text-sm font-medium text-cyan-700">
+                New Electronics Arrivals
+              </span>
+            </div>
+
+            {/* Title */}
+            <h1 className="text-6xl font-bold leading-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600">
+                Welcome to Anukul
+              </span>
+              <span className="block mt-2 text-slate-800">
+                Buy & Repair Electronics Easily
+              </span>
+            </h1>
+
+            {/* Subtitle / Description */}
+            <p className="mt-6 text-lg text-slate-600 max-w-xl leading-relaxed">
+              Explore our wide collection of electronic products or bring your
+              old gadgets to be repaired. Anukul ensures quality, speed, and
+              modern solutions for all your electronic needs.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="mt-8 flex gap-4 flex-wrap">
+              {/* Primary Button */}
+              <button className="relative inline-flex items-center gap-2 px-8 py-4 rounded-2xl text-white font-semibold bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                Browse Products
+                <IconArrowRight size={20} className="ml-1" />
+                {/* Subtle moving shine */}
+                <span className="absolute inset-0 bg-white/20 rounded-2xl opacity-0 hover:opacity-30 transition-all duration-300 pointer-events-none"></span>
+              </button>
+
+              {/* Secondary Button */}
+              {/* <button
+                className="
+  relative inline-flex items-center gap-2 px-8 py-4 
+  bg-white text-black font-semibold shadow-lg rounded-2xl 
+  border-2 border-transparent 
+  bg-[linear-gradient(white,white)] 
+  bg-origin-border bg-clip-padding, border-box 
+  before:absolute
+  hover:shadow-xl hover:-translate-y-1 transition-all duration-300
+"
+              >
+                Browse Products
+              </button> */}
+            </div>
+
+            {/* Stats */}
+            <div className="mt-12 flex gap-8 flex-wrap">
+              <div className="glass-light px-6 py-4 rounded-2xl">
+                <p className="text-3xl font-bold text-cyan-600">2K+</p>
+                <p className="text-sm text-slate-600 mt-1">Products Sold</p>
+              </div>
+              <div className="glass-light px-6 py-4 rounded-2xl">
+                <p className="text-3xl font-bold text-blue-600">5K+</p>
+                <p className="text-sm text-slate-600 mt-1">Happy Customers</p>
+              </div>
+              <div className="glass-light px-6 py-4 rounded-2xl">
+                <p className="text-3xl font-bold text-indigo-600">1K+</p>
+                <p className="text-sm text-slate-600 mt-1">Items Repaired</p>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT SIDE - SINGLE IMAGE */}
+          <div className="flex justify-center md:justify-end">
+            <div className="relative w-full max-w-md h-96 md:h-[28raem]">
+              <Image
+                src="/hero.png"
+                alt="Featured Product"
+                fill
+                className="rounded-3xl object-cover shadow-xl"
+                priority
+                objectFit="contain"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
