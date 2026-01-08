@@ -1,72 +1,10 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Search, Package, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
-// Sample data - replace with your actual product.json data
-const products = [
-  {
-    name: "18L Water Purifier",
-    imageurl:
-      "https://electronnepal.com/wp-content/uploads/2020/04/18LFilter-e1587565807147-300x632.gif",
-    category: "Mineral Water Purifier",
-  },
-  {
-    name: "1HP IGNIS 3 Jar Mixer Grinder MG-317 (750W)",
-    imageurl:
-      "https://electronnepal.com/wp-content/uploads/2020/04/mg317_3jar_Mixer-300x308.jpg",
-    category: "Mixture/ Blender",
-  },
-  {
-    name: "2 jar Mini Mixer Grinder (MG – 222) (350W)",
-    imageurl:
-      "https://electronnepal.com/wp-content/uploads/2020/04/mg222_2jar_mixy-300x357.jpg",
-    category: "Mixture/ Blender",
-  },
-  {
-    name: "18L Water Purifier",
-    imageurl:
-      "https://electronnepal.com/wp-content/uploads/2020/04/18LFilter-e1587565807147-300x632.gif",
-    category: "Mineral Water Purifier",
-  },
-  {
-    name: "1HP IGNIS 3 Jar Mixer Grinder MG-317 (750W)",
-    imageurl:
-      "https://electronnepal.com/wp-content/uploads/2020/04/mg317_3jar_Mixer-300x308.jpg",
-    category: "Mixture/ Blender",
-  },
-  {
-    name: "2 jar Mini Mixer Grinder (MG – 222) (350W)",
-    imageurl:
-      "https://electronnepal.com/wp-content/uploads/2020/04/mg222_2jar_mixy-300x357.jpg",
-    category: "Mixture/ Blender",
-  },
-  {
-    name: "18L Water Purifier",
-    imageurl:
-      "https://electronnepal.com/wp-content/uploads/2020/04/18LFilter-e1587565807147-300x632.gif",
-    category: "Mineral Water Purifier",
-  },
-  {
-    name: "1HP IGNIS 3 Jar Mixer Grinder MG-317 (750W)",
-    imageurl:
-      "https://electronnepal.com/wp-content/uploads/2020/04/mg317_3jar_Mixer-300x308.jpg",
-    category: "Mixture/ Blender",
-  },
-  {
-    name: "2 jar Mini Mixer Grinder (MG – 222) (350W)",
-    imageurl:
-      "https://electronnepal.com/wp-content/uploads/2020/04/mg222_2jar_mixy-300x357.jpg",
-    category: "Mixture/ Blender",
-  },
-  {
-    name: "Water Filter 20L",
-    imageurl:
-      "https://electronnepal.com/wp-content/uploads/2020/04/18LFilter-e1587565807147-300x632.gif",
-    category: "Mineral Water Purifier",
-  },
-];
+import products from "../../../asset/product.json";
 
 const ITEMS_PER_PAGE = 9;
 
@@ -93,6 +31,11 @@ export default function ProductListing() {
     });
   }, [searchQuery, selectedCategory]);
 
+  // Reset to page 1 when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, selectedCategory]);
+
   // Paginate products
   const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
   const paginatedProducts = useMemo(() => {
@@ -100,18 +43,12 @@ export default function ProductListing() {
     return filteredProducts.slice(start, start + ITEMS_PER_PAGE);
   }, [filteredProducts, currentPage]);
 
-  // Reset to page 1 when filters change
-  useMemo(() => {
-    setCurrentPage(1);
-  }, [searchQuery, selectedCategory]);
-
   const handlePageChange = (page) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (page >= 1 && page <= totalPages) setCurrentPage(page);
   };
 
   return (
-    <section className="py-16 relative overflow-hidden bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-16 relative overflow-hidden bg-linear-to-b from-slate-50 to-white">
       {/* Background Blobs */}
       <div className="ocean-blob ocean-blob-1" />
       <div className="ocean-blob ocean-blob-2" />
@@ -120,7 +57,7 @@ export default function ProductListing() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-600 via-blue-600 to-indigo-600">
               Our Products
             </span>
           </h2>
@@ -163,72 +100,80 @@ export default function ProductListing() {
         {paginatedProducts.length > 0 ? (
           <>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-  {paginatedProducts.map((product, idx) => (
-    <div
-      key={idx}
-      className="glass-light rounded-2xl p-4 hover:shadow-xl transition-all duration-300 group"
-    >
-      {/* Image */}
-      <div className="relative w-full h-48 mb-4 rounded-2xl overflow-hidden bg-white group">
-        <Image
-          src={product.imageurl}
-          alt={product.name}
-          fill
-          className="object-contain p-3 transition-transform duration-300 group-hover:scale-105"
-        />
-      </div>
+              {paginatedProducts.map((product,index) => (
+                <div
+                  key={index}
+                  className="glass-light rounded-2xl p-4 hover:shadow-xl transition-all duration-300 group"
+                >
+                  {/* Image */}
+                  <div className="relative w-full h-48 mb-4 rounded-2xl overflow-hidden bg-white group">
+                    <Image
+                      src={product.imageurl}
+                      alt={product.name}
+                      fill
+                      className="object-contain p-3 transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
 
-      {/* Product Info */}
-      <div className="space-y-2">
-        <span className="inline-block px-2 py-0.5 text-xs font-medium text-cyan-700 bg-cyan-50 rounded-full">
-          {product.category}
-        </span>
-        <h3 className="text-base font-semibold text-slate-800 line-clamp-2">
-          {product.name}
-        </h3>
-        <button className="w-full mt-3 px-4 py-2 rounded-xl text-white font-medium bg-gradient-to-r from-cyan-600 to-blue-600 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 text-sm">
-          View Details
-        </button>
-      </div>
-    </div>
-  ))}
-</div>
-
+                  {/* Product Info */}
+                  <div className="space-y-2">
+                    <span className="inline-block px-2 py-0.5 text-xs font-medium text-cyan-700 bg-cyan-50 rounded-full">
+                      {product.category}
+                    </span>
+                    <h3 className="text-base font-semibold text-slate-800 line-clamp-2">
+                      {product.name}
+                    </h3>
+                    <button className="w-full mt-3 px-4 py-2 rounded-xl text-white font-medium bg-linear-to-r from-cyan-600 to-blue-600 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 text-sm">
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
 
             {/* Pagination */}
-            {totalPages > 1 && (
-              <div className="mt-12 flex justify-center items-center gap-2">
-                <button
-                  onClick={() => handlePageChange(currentPage - 1)}
-                  disabled={currentPage === 1}
-                  className="p-2 rounded-xl glass-light hover:bg-gradient-to-r hover:from-cyan-600 hover:to-blue-600 hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  <ChevronLeft size={20} />
-                </button>
+{totalPages > 1 && (
+  <div className="mt-12 flex flex-col items-center gap-2">
+    {/* Page info */}
+    <p className="text-slate-600 text-sm">
+      Page {currentPage} of {totalPages}
+    </p>
 
-                {[...Array(totalPages)].map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => handlePageChange(i + 1)}
-                    className={`px-4 py-2 rounded-xl font-medium transition-all duration-300 ${
-                      currentPage === i + 1
-                        ? "bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg"
-                        : "glass-light hover:bg-gradient-to-r hover:from-cyan-600 hover:to-blue-600 hover:text-white"
-                    }`}
-                  >
-                    {i + 1}
-                  </button>
-                ))}
+    {/* Buttons */}
+    <div className="flex justify-center items-center gap-2">
+      <button
+        onClick={() => handlePageChange(currentPage - 1)}
+        disabled={currentPage === 1}
+        className="p-2 rounded-xl glass-light hover:bg-linear-to-r hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        <ChevronLeft size={20} />
+      </button>
 
-                <button
-                  onClick={() => handlePageChange(currentPage + 1)}
-                  disabled={currentPage === totalPages}
-                  className="p-2 rounded-xl glass-light hover:bg-gradient-to-r hover:from-cyan-600 hover:to-blue-600 hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  <ChevronRight size={20} />
-                </button>
-              </div>
-            )}
+      {[...Array(totalPages)].map((_, i) => (
+        <button
+          key={i}
+          onClick={() => handlePageChange(i + 1)}
+          className={`px-4 py-2 rounded-xl cursor-pointer  font-medium transition-all duration-300 ${
+            currentPage === i + 1
+              ? "bg-linear-to-r from-cyan-600 to-blue-600 text-white shadow-lg"
+              : "glass-light  hover:from-cyan-600 hover:to-blue-600 hover:bg-cyan-900"
+          }`}
+        >
+          {i + 1}
+        </button>
+      ))}
+
+      <button
+        onClick={() => handlePageChange(currentPage + 1)}
+        disabled={currentPage === totalPages}
+        className="p-2 rounded-xl glass-light hover:bg-linear-to-r hover:from-cyan-600 hover:to-blue-600 hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        <ChevronRight size={20} />
+      </button>
+    </div>
+  </div>
+)}
+
           </>
         ) : (
           <div className="text-center py-20">

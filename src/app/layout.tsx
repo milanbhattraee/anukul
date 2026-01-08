@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { MantineProvider } from "@mantine/core";
 import Header from "./component/layout/header";
+import Footer from "./component/layout/footer";
 
 
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <MantineProvider>
           <Header />
         {children}
+        <Footer />
         </MantineProvider>
       </body>
     </html>
