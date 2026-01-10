@@ -2,8 +2,6 @@
 
 import Link from "next/link";
 import {
-  IconSearch,
-  IconShoppingBag,
   IconUser,
   IconMenu2,
   IconX,
@@ -12,39 +10,35 @@ import { useEffect, useState } from "react";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Products", href: "/products" },
-  { label: "Categories", href: "/categories" },
-  { label: "Deals", href: "/deals" },
+  { label: "Products", href: "#products" },
+  { label: "Testimonial", href: "#testimonial" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [mounted, setMounted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-    
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 20);
     };
 
+    handleScroll(); // run once on mount
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md">
+    <header className="fixed top-0 left-0 w-full z-50">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <div className={`mt-2 md:mt-4 h-16 md:h-20 flex items-center justify-between rounded-2xl transition-all duration-300 px-3 md:px-0 backdrop-blur-xl ${
-          mounted && scrolled
-            ? "glass-strong ocean-glow-sm"
-            : "glass" 
-        }`}>
+        <div
+          className={`mt-2 md:mt-4 h-16 md:h-20 flex items-center justify-between rounded-2xl px-3 md:px-0 transition-all duration-300 ${
+            scrolled
+              ? "bg-transparent backdrop-blur-3xl ocean-glow-sm shadow-lg"
+              : "bg-transparent"
+          }`}
+        >
           {/* Logo */}
           <div className="px-3 md:px-8 text-lg md:text-xl font-bold tracking-wide">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">
@@ -67,23 +61,20 @@ export default function Header() {
           </nav>
 
           {/* Actions */}
-          <div className="flex items-center gap-1 md:gap-2 px-2 md:px-6">
-            {/* Desktop Icons */}
-            <div className="hidden sm:flex items-center gap-1 md:gap-2">
-              
+          <div className="flex items-center gap-2 px-2 md:px-6">
+            <div className="hidden sm:block">
               <HeaderIcon>
-                <div className=" flex text-blue-800 gap-2">
-                <IconUser size={20} />
-                <span className="">Contact Us</span>
-                </div>
+                <Link href="#contact" className="flex items-center gap-2 text-blue-800">
+                  <IconUser size={20} />
+                  <span>Contact Us</span>
+                </Link>
               </HeaderIcon>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile menu button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden p-2 rounded-xl text-slate-700 hover:text-cyan-600 glass-light hover:glass-strong transition-all"
-              aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <IconX size={24} /> : <IconMenu2 size={24} />}
             </button>
@@ -92,8 +83,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-2 glass-strong rounded-2xl overflow-hidden ocean-glow-sm animate-in slide-in-from-top duration-300 backdrop-blur-xl">
-            {/* Mobile Navigation */}
+          <div className="md:hidden mt-2 glass-strong backdrop-blur-xl rounded-2xl overflow-hidden ocean-glow-sm animate-in slide-in-from-top duration-300">
             <nav className="p-4 space-y-1">
               {navLinks.map((link) => (
                 <Link
@@ -107,14 +97,10 @@ export default function Header() {
               ))}
             </nav>
 
-            {/* Mobile Actions */}
-            <div className="p-4  w-full pt-0 grid grid-cols-3 gap-3 border-t border-slate-200">
-              
-              <button className="flex w-full flex-col items-center gap-2 p-3 rounded-xl glass-light hover:glass-strong transition-all">
-                <div className=" flex  text-blue-800 gap-2">
+            <div className="p-4 pt-0 border-t border-slate-200">
+              <button className="w-full flex items-center justify-center gap-2 p-3 rounded-xl glass-light hover:glass-strong transition-all text-blue-800">
                 <IconUser size={20} />
-                <span className="">Contact Us</span>
-                </div>
+                Contact Us
               </button>
             </div>
           </div>
@@ -124,10 +110,9 @@ export default function Header() {
   );
 }
 
-/* Small reusable icon wrapper */
 function HeaderIcon({ children }: { children: React.ReactNode }) {
   return (
-    <button className="p-2 w-full md:p-2.5 rounded-xl text-slate-700 hover:text-cyan-600 glass-light hover:glass-strong transition-all">
+    <button className="p-2.5 rounded-xl text-slate-700 hover:text-cyan-600 glass-light hover:glass-strong transition-all">
       {children}
     </button>
   );

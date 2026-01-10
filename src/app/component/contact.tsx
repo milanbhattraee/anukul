@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Clock, CheckCircle, AlertCircle } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -10,22 +10,92 @@ export default function Contact() {
     phone: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
+    // Clear status message when user starts typing
+    if (submitStatus.type) {
+      setSubmitStatus({ type: null, message: "" });
+    }
   };
 
-  const handleSubmit = () => {
-    console.log("Form submitted:", formData);
-    // Add your form submission logic here
-    alert("Message sent! We'll get back to you soon.");
+  const handleSubmit = async () => {
+    // Validate form
+    if (!formData.name || !formData.email || !formData.phone || !formData.message) {
+      setSubmitStatus({
+        type: "error",
+        message: "Please fill in all fields",
+      });
+      return;
+    }
+
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setSubmitStatus({
+        type: "error",
+        message: "Please enter a valid email address",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const response = await fetch("/api/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          senderName: formData.name,
+          senderEmail: formData.email,
+          senderPhone: formData.phone,
+          message: formData.message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message: "Message sent successfully! We'll get back to you soon.",
+        });
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message: data.message || "Failed to send message. Please try again.",
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: "Network error. Please check your connection and try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <section className="py-12 sm:py-16 relative overflow-hidden bg-gradient-to-b from-slate-50 to-white">
+    <section id="contact" className="py-12 sm:py-16 relative overflow-hidden bg-gradient-to-b from-slate-50 to-white">
       {/* Background Blobs */}
       <div className="ocean-blob ocean-blob-1" />
       <div className="ocean-blob ocean-blob-2" />
@@ -170,63 +240,41 @@ export default function Contact() {
                 {/* Submit Button */}
                 <button
                   onClick={handleSubmit}
-                  className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-white font-semibold bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 shadow-lg hover:shadow-xl transition-all duration-300 active:scale-95 touch-manipulation"
+                  disabled={isSubmitting}
+                  className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-white font-semibold bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 shadow-lg hover:shadow-xl transition-all duration-300 active:scale-95 touch-manipulation disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                   <Send size={20} />
                 </button>
+
+                {/* Status Message */}
+                {submitStatus.type && (
+                  <div
+                    className={`flex items-start gap-3 p-4 rounded-xl ${
+                      submitStatus.type === "success"
+                        ? "bg-green-50 border border-green-200"
+                        : "bg-red-50 border border-red-200"
+                    }`}
+                  >
+                    {submitStatus.type === "success" ? (
+                      <CheckCircle size={20} className="text-green-600 shrink-0 mt-0.5" />
+                    ) : (
+                      <AlertCircle size={20} className="text-red-600 shrink-0 mt-0.5" />
+                    )}
+                    <p
+                      className={`text-sm ${
+                        submitStatus.type === "success" ? "text-green-800" : "text-red-800"
+                      }`}
+                    >
+                      {submitStatus.message}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .ocean-blob {
-          position: absolute;
-          border-radius: 50%;
-          filter: blur(80px);
-          opacity: 0.15;
-          animation: float 20s ease-in-out infinite;
-        }
-
-        .ocean-blob-1 {
-          width: 500px;
-          height: 500px;
-          background: linear-gradient(45deg, #06b6d4, #3b82f6);
-          top: -100px;
-          left: -100px;
-          animation-delay: 0s;
-        }
-
-        .ocean-blob-2 {
-          width: 400px;
-          height: 400px;
-          background: linear-gradient(45deg, #3b82f6, #6366f1);
-          bottom: -100px;
-          right: -100px;
-          animation-delay: 7s;
-        }
-
-        @keyframes float {
-          0%,
-          100% {
-            transform: translate(0, 0) scale(1);
-          }
-          33% {
-            transform: translate(30px, -30px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-        }
-
-        .glass-light {
-          background: rgba(255, 255, 255, 0.7);
-          backdrop-filter: blur(10px);
-          border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-      `}</style>
     </section>
   );
 }

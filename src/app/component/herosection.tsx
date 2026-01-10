@@ -3,6 +3,7 @@
 import { Button } from "@mantine/core";
 import { IconArrowRight, IconSparkles } from "@tabler/icons-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -44,38 +45,31 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="mt-6 sm:mt-8 flex gap-3 sm:gap-4 flex-wrap">
               {/* Primary Button */}
-              <button className="relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-2xl text-white font-semibold bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 shadow-lg hover:shadow-xl transition-all duration-300 active:scale-95 touch-manipulation">
+              <Link href="#products" className="relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-2xl text-white font-semibold bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 shadow-lg hover:shadow-xl transition-all duration-300 active:scale-95 touch-manipulation">
                 Browse Products
                 <IconArrowRight size={20} className="ml-1" />
                 {/* Subtle moving shine */}
                 <span className="absolute inset-0 bg-white/20 rounded-2xl opacity-0 hover:opacity-30 transition-all duration-300 pointer-events-none"></span>
-              </button>
-
-              {/* Secondary Button */}
-              {/* <button
-                className="
-  relative inline-flex items-center gap-2 px-8 py-4 
-  bg-white text-black font-semibold shadow-lg rounded-2xl 
-  border-2 border-transparent 
-  bg-[linear-gradient(white,white)] 
-  bg-origin-border bg-clip-padding, border-box 
-  before:absolute
-  hover:shadow-xl hover:-translate-y-1 transition-all duration-300
-"
-              >
-                Browse Products
-              </button> */}
+              </Link>
             </div>
 
             {/* Stats */}
             <div className="mt-8 sm:mt-12 flex gap-4 sm:gap-8">
               <div className="glass-light px-4 sm:px-6 py-3 sm:py-4 rounded-xl sm:rounded-2xl flex-1 sm:flex-initial">
-                <p className="text-2xl sm:text-3xl font-bold text-cyan-600">2K+</p>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1">Products</p>
+                <p className="text-2xl sm:text-3xl font-bold text-cyan-600">
+                  2K+
+                </p>
+                <p className="text-xs sm:text-sm text-slate-600 mt-1">
+                  Products
+                </p>
               </div>
               <div className="glass-light px-4 sm:px-6 py-3 sm:py-4 rounded-xl sm:rounded-2xl flex-1 sm:flex-initial">
-                <p className="text-2xl sm:text-3xl font-bold text-blue-600">5K+</p>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1">Happy Customers</p>
+                <p className="text-2xl sm:text-3xl font-bold text-blue-600">
+                  5K+
+                </p>
+                <p className="text-xs sm:text-sm text-slate-600 mt-1">
+                  Happy Customers
+                </p>
               </div>
               <div className="glass-light px-6 py-4 rounded-2xl">
                 <p className="text-3xl font-bold text-indigo-600">1K+</p>
@@ -91,9 +85,9 @@ export default function Hero() {
                 src="/hero.png"
                 alt="Featured Product"
                 fill
-                className="rounded-3xl object-cover shadow-xl"
                 priority
-                objectFit="contain"
+                className="rounded-3xl hover:scale-105 transition-all ease-linear duration-150 object-contain shadow-xl"
+
               />
             </div>
           </div>

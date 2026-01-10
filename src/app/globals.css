@@ -85,6 +85,13 @@ body {
   box-shadow: 0 8px 32px 0 rgba(8, 145, 178, 0.15);
 }
 
+.glass-dark {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 /* Ocean Glow Effects */
 .ocean-glow {
   box-shadow: 0 0 40px rgba(8, 145, 178, 0.2),
@@ -131,6 +138,34 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   animation-delay: 14s;
+}
+
+/* Footer Blobs */
+.footer-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.1;
+  z-index: -1;
+  animation: float 25s ease-in-out infinite;
+}
+
+.footer-blob-1 {
+  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  width: 600px;
+  height: 600px;
+  top: -200px;
+  left: -200px;
+  animation-delay: 0s;
+}
+
+.footer-blob-2 {
+  background: linear-gradient(45deg, #3b82f6, #6366f1);
+  width: 500px;
+  height: 500px;
+  bottom: -150px;
+  right: -150px;
+  animation-delay: 10s;
 }
 
 @keyframes float {

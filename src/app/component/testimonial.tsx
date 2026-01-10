@@ -49,7 +49,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-12 sm:py-16 relative overflow-hidden bg-gradient-to-b from-white to-slate-50">
+    <section id="testimonial" className="py-12 sm:py-16 relative overflow-hidden bg-gradient-to-b from-white to-slate-50">
       {/* Background Blobs */}
       <div className="ocean-blob ocean-blob-1" />
       <div className="ocean-blob ocean-blob-2" />
@@ -122,61 +122,6 @@ export default function Testimonials() {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .ocean-blob {
-          position: absolute;
-          border-radius: 50%;
-          filter: blur(80px);
-          opacity: 0.15;
-          animation: float 20s ease-in-out infinite;
-        }
-
-        .ocean-blob-1 {
-          width: 500px;
-          height: 500px;
-          background: linear-gradient(45deg, #06b6d4, #3b82f6);
-          top: -100px;
-          left: -100px;
-          animation-delay: 0s;
-        }
-
-        .ocean-blob-2 {
-          width: 400px;
-          height: 400px;
-          background: linear-gradient(45deg, #3b82f6, #6366f1);
-          bottom: -100px;
-          right: -100px;
-          animation-delay: 7s;
-        }
-
-        @keyframes float {
-          0%, 100% {
-            transform: translate(0, 0) scale(1);
-          }
-          33% {
-            transform: translate(30px, -30px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-        }
-
-        .glass-light {
-          background: rgba(255, 255, 255, 0.7);
-          backdrop-filter: blur(10px);
-          border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        /* Hide horizontal scrollbar completely */
-        .hide-scrollbar {
-          -ms-overflow-style: none; /* IE and Edge */
-          scrollbar-width: none; /* Firefox */
-        }
-        .hide-scrollbar::-webkit-scrollbar {
-          display: none; /* Chrome, Safari, Opera */
-        }
-      `}</style>
     </section>
   );
 }

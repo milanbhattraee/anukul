@@ -143,52 +143,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .footer-blob {
-          position: absolute;
-          border-radius: 50%;
-          filter: blur(100px);
-          opacity: 0.1;
-          animation: float 25s ease-in-out infinite;
-        }
-        
-        .footer-blob-1 {
-          width: 600px;
-          height: 600px;
-          background: linear-gradient(45deg, #06b6d4, #3b82f6);
-          top: -200px;
-          left: -200px;
-          animation-delay: 0s;
-        }
-        
-        .footer-blob-2 {
-          width: 500px;
-          height: 500px;
-          background: linear-gradient(45deg, #3b82f6, #6366f1);
-          bottom: -150px;
-          right: -150px;
-          animation-delay: 10s;
-        }
-        
-        @keyframes float {
-          0%, 100% {
-            transform: translate(0, 0) scale(1);
-          }
-          33% {
-            transform: translate(40px, -40px) scale(1.1);
-          }
-          66% {
-            transform: translate(-30px, 30px) scale(0.9);
-          }
-        }
-        
-        .glass-dark {
-          background: rgba(255, 255, 255, 0.05);
-          backdrop-filter: blur(10px);
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-      `}</style>
     </footer>
   );
 }

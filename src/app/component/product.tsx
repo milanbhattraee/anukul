@@ -43,12 +43,12 @@ export default function ProductListing() {
     return filteredProducts.slice(start, start + ITEMS_PER_PAGE);
   }, [filteredProducts, currentPage]);
 
-  const handlePageChange = (page) => {
+  const handlePageChange = (page : any) => {
     if (page >= 1 && page <= totalPages) setCurrentPage(page);
   };
 
   return (
-    <section className="py-16 relative overflow-hidden bg-linear-to-b from-slate-50 to-white">
+    <section id="products" className="py-16 relative overflow-hidden bg-linear-to-b from-slate-50 to-white">
       {/* Background Blobs */}
       <div className="ocean-blob ocean-blob-1" />
       <div className="ocean-blob ocean-blob-2" />
@@ -189,60 +189,6 @@ export default function ProductListing() {
           </div>
         )}
       </div>
-
-      <style jsx>{`
-        .ocean-blob {
-          position: absolute;
-          border-radius: 50%;
-          filter: blur(80px);
-          opacity: 0.15;
-          animation: float 20s ease-in-out infinite;
-        }
-
-        .ocean-blob-1 {
-          width: 500px;
-          height: 500px;
-          background: linear-gradient(45deg, #06b6d4, #3b82f6);
-          top: -100px;
-          left: -100px;
-          animation-delay: 0s;
-        }
-
-        .ocean-blob-2 {
-          width: 400px;
-          height: 400px;
-          background: linear-gradient(45deg, #3b82f6, #6366f1);
-          bottom: -100px;
-          right: -100px;
-          animation-delay: 7s;
-        }
-
-        @keyframes float {
-          0%,
-          100% {
-            transform: translate(0, 0) scale(1);
-          }
-          33% {
-            transform: translate(30px, -30px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-        }
-
-        .glass-light {
-          background: rgba(255, 255, 255, 0.7);
-          backdrop-filter: blur(10px);
-          border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .line-clamp-2 {
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-        }
-      `}</style>
     </section>
   );
 }
