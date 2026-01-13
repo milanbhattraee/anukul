@@ -43,12 +43,15 @@ export default function ProductListing() {
     return filteredProducts.slice(start, start + ITEMS_PER_PAGE);
   }, [filteredProducts, currentPage]);
 
-  const handlePageChange = (page : any) => {
+  const handlePageChange = (page: any) => {
     if (page >= 1 && page <= totalPages) setCurrentPage(page);
   };
 
   return (
-    <section id="products" className="py-16 relative overflow-hidden bg-linear-to-b from-slate-50 to-white">
+    <section
+      id="products"
+      className="py-16 relative overflow-hidden bg-linear-to-b from-slate-50 to-white"
+    >
       {/* Background Blobs */}
       <div className="ocean-blob ocean-blob-1" />
       <div className="ocean-blob ocean-blob-2" />
@@ -100,7 +103,7 @@ export default function ProductListing() {
         {paginatedProducts.length > 0 ? (
           <>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {paginatedProducts.map((product,index) => (
+              {paginatedProducts.map((product, index) => (
                 <div
                   key={index}
                   className="glass-light rounded-2xl p-4 hover:shadow-xl transition-all duration-300 group"
@@ -132,48 +135,84 @@ export default function ProductListing() {
             </div>
 
             {/* Pagination */}
-{totalPages > 1 && (
-  <div className="mt-12 flex flex-col items-center gap-2">
-    {/* Page info */}
-    <p className="text-slate-600 text-sm">
-      Page {currentPage} of {totalPages}
-    </p>
+            {totalPages > 1 && (
+              <div className="mt-12 flex flex-col items-center gap-2">
+                {/* Page info */}
+                <p className="text-slate-600 text-sm">
+                  Page {currentPage} of {totalPages}
+                </p>
 
-    {/* Buttons */}
-    <div className="flex justify-center items-center gap-2">
-      <button
-        onClick={() => handlePageChange(currentPage - 1)}
-        disabled={currentPage === 1}
-        className="p-2 rounded-xl glass-light hover:bg-linear-to-r hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        <ChevronLeft size={20} />
-      </button>
+                {/* Buttons */}
+                <div className="flex justify-center items-center gap-2">
+                  <button
+                    onClick={() => handlePageChange(currentPage - 1)}
+                    disabled={currentPage === 1}
+                    className="p-2 rounded-xl glass-light hover:bg-linear-to-r hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    <ChevronLeft size={20} />
+                  </button>
 
-      {[...Array(totalPages)].map((_, i) => (
-        <button
-          key={i}
-          onClick={() => handlePageChange(i + 1)}
-          className={`px-4 py-2 rounded-xl cursor-pointer  font-medium transition-all duration-300 ${
-            currentPage === i + 1
-              ? "bg-linear-to-r from-cyan-600 to-blue-600 text-white shadow-lg"
-              : "glass-light  hover:from-cyan-600 hover:to-blue-600 hover:bg-cyan-900"
-          }`}
-        >
-          {i + 1}
-        </button>
-      ))}
+                  {/* Smart pagination with ellipsis */}
+                  {(() => {
+                    const pages = [];
+                    const showEllipsis = totalPages > 7;
+                    
+                    if (!showEllipsis) {
+                      // Show all pages if 7 or fewer
+                      for (let i = 1; i <= totalPages; i++) {
+                        pages.push(i);
+                      }
+                    } else {
+                      // Always show first page
+                      pages.push(1);
+                      
+                      if (currentPage <= 3) {
+                        // Near start: 1 2 3 4 ... last
+                        pages.push(2, 3, 4, '...', totalPages);
+                      } else if (currentPage >= totalPages - 2) {
+                        // Near end: 1 ... last-3 last-2 last-1 last
+                        pages.push('...', totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+                      } else {
+                        // Middle: 1 ... current-1 current current+1 ... last
+                        pages.push('...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages);
+                      }
+                    }
+                    
+                    return pages.map((page, index) => {
+                      if (page === '...') {
+                        return (
+                          <span key={`ellipsis-${index}`} className="px-2 text-slate-400">
+                            ...
+                          </span>
+                        );
+                      }
+                      
+                      return (
+                        <button
+                          key={page}
+                          onClick={() => handlePageChange(page)}
+                          className={`px-4 py-2 rounded-xl cursor-pointer font-medium transition-all duration-300 ${
+                            currentPage === page
+                              ? "bg-linear-to-r from-cyan-600 to-blue-600 text-white shadow-lg"
+                              : "glass-light hover:from-cyan-600 hover:to-blue-600 hover:bg-cyan-900"
+                          }`}
+                        >
+                          {page}
+                        </button>
+                      );
+                    });
+                  })()}
 
-      <button
-        onClick={() => handlePageChange(currentPage + 1)}
-        disabled={currentPage === totalPages}
-        className="p-2 rounded-xl glass-light hover:bg-linear-to-r hover:from-cyan-600 hover:to-blue-600 hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        <ChevronRight size={20} />
-      </button>
-    </div>
-  </div>
-)}
-
+                  <button
+                    onClick={() => handlePageChange(currentPage + 1)}
+                    disabled={currentPage === totalPages}
+                    className="p-2 rounded-xl glass-light hover:bg-linear-to-r hover:from-cyan-600 hover:to-blue-600 hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    <ChevronRight size={20} />
+                  </button>
+                </div>
+              </div>
+            )}
           </>
         ) : (
           <div className="text-center py-20">

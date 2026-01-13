@@ -358,5 +358,770 @@
     "name": "Heavy Dry Iron EL-530 (1750 Grams)",
     "imageurl": "https://electronnepal.com/wp-content/uploads/2020/04/530_HeavyDryIron-1-300x202.jpg",
     "category": "Dry Iron"
+  },
+  {
+    "name": "Heavy Dry Iron EL-530 (1750 Grams)",
+    "imageurl": "https://electronnepal.com/wp-content/uploads/2020/04/530_HeavyDryIron-1-300x202.jpg",
+    "category": "Dry Iron"
+  },
+  {
+    "name": "3 Channel ECG Machine Flight 304",
+    "imageurl": "/hospital_images/3_Channel_ECG_Machine_Flight_304.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "3 Channel ECG Machine Model 301",
+    "imageurl": "/hospital_images/3_Channel_ECG_Machine_Model_301.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Air Splint Kit",
+    "imageurl": "/hospital_images/Air_Splint_Kit.jpeg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Aluminum Moldable Splint",
+    "imageurl": "/hospital_images/Aluminum_Moldable_Splint.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Aluminum Scoop Stretcher",
+    "imageurl": "/hospital_images/Aluminum_Scoop_Stretcher.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Ambulatory Blood Pressure Monitor",
+    "imageurl": "/hospital_images/Ambulatory_Blood_Pressure_Monitor.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Anti Decubitus Pump System Aircure 1000",
+    "imageurl": "/hospital_images/Anti_Decubitus_Pump_System_Aircure_1000.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Aqua 12T Multipara Monitor",
+    "imageurl": "/hospital_images/Aqua_12T_Multipara_Monitor.png",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Aqua 12 Multipara Monitor",
+    "imageurl": "/hospital_images/Aqua_12_Multipara_Monitor.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Autoclave Indicator Tape",
+    "imageurl": "/hospital_images/Autoclave_Indicator_Tape.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Autoloader Collapsible Stretcher",
+    "imageurl": "/hospital_images/Autoloader_Collapsible_Stretcher.webp",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Automated External Defibrillator 7000",
+    "imageurl": "/hospital_images/Automated_External_Defibrillator_7000.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Automatic External Defibrillator VIEW PLUS",
+    "imageurl": "/hospital_images/Automatic_External_Defibrillator_VIEW_PLUS.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Auto CPAP with Humidifier",
+    "imageurl": "/hospital_images/Auto_CPAP_with_Humidifier.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "BIPAP Machine",
+    "imageurl": "/hospital_images/BIPAP_Machine.png",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Biphasic Defibrillator",
+    "imageurl": "/hospital_images/Biphasic_Defibrillator.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Blood Lancets",
+    "imageurl": "/hospital_images/Blood_Lancets.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "CPR Board",
+    "imageurl": "/hospital_images/CPR_Board.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Digital Blood Pressure Monitor",
+    "imageurl": "/hospital_images/Digital_Blood_Pressure_Monitor.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Digital Thermometer DT-01",
+    "imageurl": "/hospital_images/Digital_Thermometer_DT-01.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "ECG Holter Machine 12 Channel",
+    "imageurl": "/hospital_images/ECG_Holter_Machine_12_Channel.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "ECG Holter Machine 3 Channel",
+    "imageurl": "/hospital_images/ECG_Holter_Machine_3_Channel.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Electric Breast Pump",
+    "imageurl": "/hospital_images/Electric_Breast_Pump.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "External Side Stream ETCO2 Module",
+    "imageurl": "/hospital_images/External_Side_Stream_ETCO2_Module.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Fetal Doppler 108",
+    "imageurl": "/hospital_images/Fetal_Doppler_108.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Fetal Doppler ND-106",
+    "imageurl": "/hospital_images/Fetal_Doppler_ND-106.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Fetal Monitor Flight 800",
+    "imageurl": "/hospital_images/Fetal_Monitor_Flight_800.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Fetal Monitor with Twin Probe",
+    "imageurl": "/hospital_images/Fetal_Monitor_with_Twin_Probe.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Fingertip Pulse Oximeter",
+    "imageurl": "/hospital_images/Fingertip_Pulse_Oximeter.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Flexible Digital Thermometer DT-02",
+    "imageurl": "/hospital_images/Flexible_Digital_Thermometer_DT-02.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Flight 23 Multipara Monitor",
+    "imageurl": "/hospital_images/Flight_23_Multipara_Monitor.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Forehead Infrared Thermometer IT-01",
+    "imageurl": "/hospital_images/Forehead_Infrared_Thermometer_IT-01.png",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Four Fold Stretcher",
+    "imageurl": "/hospital_images/Four_Fold_Stretcher.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Glucometer Sure Screen",
+    "imageurl": "/hospital_images/Glucometer_Sure_Screen.png",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Handheld Spirometer with Software",
+    "imageurl": "/hospital_images/Handheld_Spirometer_with_Software.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Hospital Cervical Collar CC-01",
+    "imageurl": "/hospital_images/Hospital_Cervical_Collar_CC-01.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Hospivac 350 Portable Suction Unit",
+    "imageurl": "/hospital_images/Hospivac_350_Portable_Suction_Unit.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "IBP Module",
+    "imageurl": "/hospital_images/IBP_Module.png",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "ICU Ventilator",
+    "imageurl": "/hospital_images/ICU_Ventilator.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Infrared Heating Lamp",
+    "imageurl": "/hospital_images/Infrared_Heating_Lamp.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Infusion and Blood Fluid Warmer",
+    "imageurl": "/hospital_images/Infusion_and_Blood_Fluid_Warmer.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Infusion Pump IP04",
+    "imageurl": "/hospital_images/Infusion_Pump_IP04.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Manual Breast Pump",
+    "imageurl": "/hospital_images/Manual_Breast_Pump.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Multipara Patient Monitor FLIGHT 9000",
+    "imageurl": "/hospital_images/Multipara_Patient_Monitor_FLIGHT_9000.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Multi Parameter Patient Monitor CMS 6000",
+    "imageurl": "/hospital_images/Multi_Parameter_Patient_Monitor_CMS_6000.webp",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Multi Parameter Patient Monitor CMS 7000",
+    "imageurl": "/hospital_images/Multi_Parameter_Patient_Monitor_CMS_7000.webp",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Multi Parameter Patient Monitor CMS 8000",
+    "imageurl": "/hospital_images/Multi_Parameter_Patient_Monitor_CMS_8000.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Multi Parameter Patient Monitor Flight 12",
+    "imageurl": "/hospital_images/Multi_Parameter_Patient_Monitor_Flight_12.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Nebulizer",
+    "imageurl": "/hospital_images/Nebulizer.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "NIBP Stimulator",
+    "imageurl": "/hospital_images/NIBP_Stimulator.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Oxygen Concentrator",
+    "imageurl": "/hospital_images/Oxygen_Concentrator.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Oxygen Regulator OR-01",
+    "imageurl": "/hospital_images/Oxygen_Regulator_OR-01.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Patient Monitor Wall Mount Stand",
+    "imageurl": "/hospital_images/Patient_Monitor_Wall_Mount_Stand.png",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Peak Flow Meter",
+    "imageurl": "/hospital_images/Peak_Flow_Meter.webp",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Plastic Scoop Stretcher",
+    "imageurl": "/hospital_images/Plastic_Scoop_Stretcher.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Portable ECG Holter",
+    "imageurl": "/hospital_images/Portable_ECG_Holter.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Portable Electric Suction Unit SU-107",
+    "imageurl": "/hospital_images/Portable_Electric_Suction_Unit_SU-107.jpeg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Portable Ventilator Airlog-3",
+    "imageurl": "/hospital_images/Portable_Ventilator_Airlog-3.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Pulse Oximeter Handheld 65",
+    "imageurl": "/hospital_images/Pulse_Oximeter_Handheld_65.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Rubber Hot Water Bottle",
+    "imageurl": "/hospital_images/Rubber_Hot_Water_Bottle.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Single Channel ECG Machine",
+    "imageurl": "/hospital_images/Single_Channel_ECG_Machine.webp",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Six Channel ECG Machine",
+    "imageurl": "/hospital_images/Six_Channel_ECG_Machine.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Spine Board Stretcher",
+    "imageurl": "/hospital_images/Spine_Board_Stretcher.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Spirometer with Printer",
+    "imageurl": "/hospital_images/Spirometer_with_Printer.jpeg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "SpO2 Stimulator",
+    "imageurl": "/hospital_images/SpO2_Stimulator.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Stair Stretcher",
+    "imageurl": "/hospital_images/Stair_Stretcher.png",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Suction Machine Electric-Manual",
+    "imageurl": "/hospital_images/Suction_Machine_Electric-Manual.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Syringe Pump",
+    "imageurl": "/hospital_images/Syringe_Pump.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Tabletop Pulse Oximeter",
+    "imageurl": "/hospital_images/Tabletop_Pulse_Oximeter.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Trolley Model Suction SU-103",
+    "imageurl": "/hospital_images/Trolley_Model_Suction_SU-103.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Twelve Channel ECG Machine",
+    "imageurl": "/hospital_images/Twelve_Channel_ECG_Machine.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Two Fold Stretcher",
+    "imageurl": "/hospital_images/Two_Fold_Stretcher.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Vacuum Immobilization Stretcher",
+    "imageurl": "/hospital_images/Vacuum_Immobilization_Stretcher.png",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Video Laryngoscope 3-Blades",
+    "imageurl": "/hospital_images/Video_Laryngoscope_3-Blades.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Vital Sign 3-Para Patient Monitor",
+    "imageurl": "/hospital_images/Vital_Sign_3-Para_Patient_Monitor.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Weighing Scales WS001",
+    "imageurl": "/hospital_images/Weighing_Scales_WS001.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Wheelchair Cum Stretcher",
+    "imageurl": "/hospital_images/Wheelchair_Cum_Stretcher.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Air Splint Kit",
+    "imageurl": "/hospital_images/Air_Splint_Kit.jpeg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Aluminum Moldable Splint",
+    "imageurl": "/hospital_images/Aluminum_Moldable_Splint.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Aluminum Scoop Stretcher",
+    "imageurl": "/hospital_images/Aluminum_Scoop_Stretcher.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Ambulatory Blood Pressure Monitor",
+    "imageurl": "/hospital_images/Ambulatory_Blood_Pressure_Monitor.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Anti Decubitus Pump System Aircure 1000",
+    "imageurl": "/hospital_images/Anti_Decubitus_Pump_System_Aircure_1000.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Aqua 12T Multipara Monitor",
+    "imageurl": "/hospital_images/Aqua_12T_Multipara_Monitor.png",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Aqua 12 Multipara Monitor",
+    "imageurl": "/hospital_images/Aqua_12_Multipara_Monitor.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Autoclave Indicator Tape",
+    "imageurl": "/hospital_images/Autoclave_Indicator_Tape.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Autoloader Collapsible Stretcher",
+    "imageurl": "/hospital_images/Autoloader_Collapsible_Stretcher.webp",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Automated External Defibrillator 7000",
+    "imageurl": "/hospital_images/Automated_External_Defibrillator_7000.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Automatic External Defibrillator VIEW PLUS",
+    "imageurl": "/hospital_images/Automatic_External_Defibrillator_VIEW_PLUS.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Auto CPAP with Humidifier",
+    "imageurl": "/hospital_images/Auto_CPAP_with_Humidifier.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "BIPAP Machine",
+    "imageurl": "/hospital_images/BIPAP_Machine.png",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Biphasic Defibrillator",
+    "imageurl": "/hospital_images/Biphasic_Defibrillator.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Blood Lancets",
+    "imageurl": "/hospital_images/Blood_Lancets.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "CPR Board",
+    "imageurl": "/hospital_images/CPR_Board.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Digital Blood Pressure Monitor",
+    "imageurl": "/hospital_images/Digital_Blood_Pressure_Monitor.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Digital Thermometer DT-01",
+    "imageurl": "/hospital_images/Digital_Thermometer_DT-01.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "ECG Holter Machine 12 Channel",
+    "imageurl": "/hospital_images/ECG_Holter_Machine_12_Channel.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "ECG Holter Machine 3 Channel",
+    "imageurl": "/hospital_images/ECG_Holter_Machine_3_Channel.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Electric Breast Pump",
+    "imageurl": "/hospital_images/Electric_Breast_Pump.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "External Side Stream ETCO2 Module",
+    "imageurl": "/hospital_images/External_Side_Stream_ETCO2_Module.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Fetal Doppler 108",
+    "imageurl": "/hospital_images/Fetal_Doppler_108.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Fetal Doppler ND-106",
+    "imageurl": "/hospital_images/Fetal_Doppler_ND-106.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Fetal Monitor Flight 800",
+    "imageurl": "/hospital_images/Fetal_Monitor_Flight_800.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Fetal Monitor with Twin Probe",
+    "imageurl": "/hospital_images/Fetal_Monitor_with_Twin_Probe.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Fingertip Pulse Oximeter",
+    "imageurl": "/hospital_images/Fingertip_Pulse_Oximeter.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Flexible Digital Thermometer DT-02",
+    "imageurl": "/hospital_images/Flexible_Digital_Thermometer_DT-02.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Flight 23 Multipara Monitor",
+    "imageurl": "/hospital_images/Flight_23_Multipara_Monitor.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Forehead Infrared Thermometer IT-01",
+    "imageurl": "/hospital_images/Forehead_Infrared_Thermometer_IT-01.png",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Four Fold Stretcher",
+    "imageurl": "/hospital_images/Four_Fold_Stretcher.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Glucometer Sure Screen",
+    "imageurl": "/hospital_images/Glucometer_Sure_Screen.png",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Handheld Spirometer with Software",
+    "imageurl": "/hospital_images/Handheld_Spirometer_with_Software.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Hospital Cervical Collar CC-01",
+    "imageurl": "/hospital_images/Hospital_Cervical_Collar_CC-01.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Hospivac 350 Portable Suction Unit",
+    "imageurl": "/hospital_images/Hospivac_350_Portable_Suction_Unit.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "IBP Module",
+    "imageurl": "/hospital_images/IBP_Module.png",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "ICU Ventilator",
+    "imageurl": "/hospital_images/ICU_Ventilator.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Infrared Heating Lamp",
+    "imageurl": "/hospital_images/Infrared_Heating_Lamp.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Infusion and Blood Fluid Warmer",
+    "imageurl": "/hospital_images/Infusion_and_Blood_Fluid_Warmer.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Infusion Pump IP04",
+    "imageurl": "/hospital_images/Infusion_Pump_IP04.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Manual Breast Pump",
+    "imageurl": "/hospital_images/Manual_Breast_Pump.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Multipara Patient Monitor FLIGHT 9000",
+    "imageurl": "/hospital_images/Multipara_Patient_Monitor_FLIGHT_9000.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Multi Parameter Patient Monitor CMS 6000",
+    "imageurl": "/hospital_images/Multi_Parameter_Patient_Monitor_CMS_6000.webp",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Multi Parameter Patient Monitor CMS 7000",
+    "imageurl": "/hospital_images/Multi_Parameter_Patient_Monitor_CMS_7000.webp",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Multi Parameter Patient Monitor CMS 8000",
+    "imageurl": "/hospital_images/Multi_Parameter_Patient_Monitor_CMS_8000.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Multi Parameter Patient Monitor Flight 12",
+    "imageurl": "/hospital_images/Multi_Parameter_Patient_Monitor_Flight_12.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Nebulizer",
+    "imageurl": "/hospital_images/Nebulizer.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "NIBP Stimulator",
+    "imageurl": "/hospital_images/NIBP_Stimulator.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Oxygen Concentrator",
+    "imageurl": "/hospital_images/Oxygen_Concentrator.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Oxygen Regulator OR-01",
+    "imageurl": "/hospital_images/Oxygen_Regulator_OR-01.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Patient Monitor Wall Mount Stand",
+    "imageurl": "/hospital_images/Patient_Monitor_Wall_Mount_Stand.png",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Peak Flow Meter",
+    "imageurl": "/hospital_images/Peak_Flow_Meter.webp",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Plastic Scoop Stretcher",
+    "imageurl": "/hospital_images/Plastic_Scoop_Stretcher.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Portable ECG Holter",
+    "imageurl": "/hospital_images/Portable_ECG_Holter.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Portable Electric Suction Unit SU-107",
+    "imageurl": "/hospital_images/Portable_Electric_Suction_Unit_SU-107.jpeg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Portable Ventilator Airlog-3",
+    "imageurl": "/hospital_images/Portable_Ventilator_Airlog-3.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Pulse Oximeter Handheld 65",
+    "imageurl": "/hospital_images/Pulse_Oximeter_Handheld_65.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Rubber Hot Water Bottle",
+    "imageurl": "/hospital_images/Rubber_Hot_Water_Bottle.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Single Channel ECG Machine",
+    "imageurl": "/hospital_images/Single_Channel_ECG_Machine.webp",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Six Channel ECG Machine",
+    "imageurl": "/hospital_images/Six_Channel_ECG_Machine.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Spine Board Stretcher",
+    "imageurl": "/hospital_images/Spine_Board_Stretcher.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Spirometer with Printer",
+    "imageurl": "/hospital_images/Spirometer_with_Printer.jpeg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "SpO2 Stimulator",
+    "imageurl": "/hospital_images/SpO2_Stimulator.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Stair Stretcher",
+    "imageurl": "/hospital_images/Stair_Stretcher.png",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Suction Machine Electric-Manual",
+    "imageurl": "/hospital_images/Suction_Machine_Electric-Manual.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Syringe Pump",
+    "imageurl": "/hospital_images/Syringe_Pump.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Tabletop Pulse Oximeter",
+    "imageurl": "/hospital_images/Tabletop_Pulse_Oximeter.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Trolley Model Suction SU-103",
+    "imageurl": "/hospital_images/Trolley_Model_Suction_SU-103.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Twelve Channel ECG Machine",
+    "imageurl": "/hospital_images/Twelve_Channel_ECG_Machine.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Two Fold Stretcher",
+    "imageurl": "/hospital_images/Two_Fold_Stretcher.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Vacuum Immobilization Stretcher",
+    "imageurl": "/hospital_images/Vacuum_Immobilization_Stretcher.png",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Video Laryngoscope 3-Blades",
+    "imageurl": "/hospital_images/Video_Laryngoscope_3-Blades.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Vital Sign 3-Para Patient Monitor",
+    "imageurl": "/hospital_images/Vital_Sign_3-Para_Patient_Monitor.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Weighing Scales WS001",
+    "imageurl": "/hospital_images/Weighing_Scales_WS001.jpg",
+    "category": "medical_equipment"
+  },
+  {
+    "name": "Wheelchair Cum Stretcher",
+    "imageurl": "/hospital_images/Wheelchair_Cum_Stretcher.jpg",
+    "category": "medical_equipment"
   }
 ]
