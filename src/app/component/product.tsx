@@ -56,7 +56,7 @@ export default function ProductListing() {
   return (
     <section
       id="products"
-      className="py-16 relative overflow-hidden bg-gradient-to-b from-slate-50 to-white"
+      className="py-16 relative overflow-hidden bg-linear-to-b from-slate-50 to-white"
     >
       {/* Background Blobs */}
       <div className="ocean-blob ocean-blob-1" />
@@ -66,7 +66,7 @@ export default function ProductListing() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-600 via-blue-600 to-indigo-600">
               Our Products
             </span>
           </h2>
@@ -137,7 +137,7 @@ export default function ProductListing() {
                       <span className="inline-block px-2 py-0.5 text-xs font-medium text-cyan-700 bg-cyan-50 rounded-full">
                         {product.category}
                       </span>
-                      <h3 className="text-base font-semibold text-slate-800 line-clamp-2 min-h-[3rem]">
+                      <h3 className="text-base font-semibold text-slate-800 line-clamp-2 min-h-12">
                         {product.name}
                       </h3>
                       <button
@@ -146,7 +146,7 @@ export default function ProductListing() {
                         className={`w-full mt-3 px-4 py-2.5 rounded-xl font-medium transition-all duration-300 text-sm flex items-center justify-center gap-2 ${
                           inCart
                             ? "bg-green-500 text-white cursor-default"
-                            : "text-white bg-gradient-to-r from-cyan-600 to-blue-600 hover:shadow-lg hover:-translate-y-0.5 active:scale-95"
+                            : "text-white bg-linear-to-r from-cyan-600 to-blue-600 hover:shadow-lg hover:-translate-y-0.5 active:scale-95"
                         }`}
                       >
                         {inCart ? (
@@ -180,7 +180,7 @@ export default function ProductListing() {
                   <button
                     onClick={() => handlePageChange(currentPage - 1)}
                     disabled={currentPage === 1}
-                    className="p-2 rounded-xl glass-light hover:bg-gradient-to-r hover:from-cyan-600 hover:to-blue-600 hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="p-2 rounded-xl glass-light hover:bg-linear-to-r hover:from-cyan-600 hover:to-blue-600 hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <ChevronLeft size={20} />
                   </button>
@@ -226,7 +226,7 @@ export default function ProductListing() {
                           onClick={() => handlePageChange(page)}
                           className={`px-4 py-2 rounded-xl cursor-pointer font-medium transition-all duration-300 ${
                             currentPage === page
-                              ? "bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg"
+                              ? "bg-linear-to-r from-cyan-600 to-blue-600 text-white shadow-lg"
                               : "glass-light hover:bg-cyan-50"
                           }`}
                         >
@@ -239,7 +239,7 @@ export default function ProductListing() {
                   <button
                     onClick={() => handlePageChange(currentPage + 1)}
                     disabled={currentPage === totalPages}
-                    className="p-2 rounded-xl glass-light hover:bg-gradient-to-r hover:from-cyan-600 hover:to-blue-600 hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="p-2 rounded-xl glass-light hover:bg-linear-to-r hover:from-cyan-600 hover:to-blue-600 hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <ChevronRight size={20} />
                   </button>

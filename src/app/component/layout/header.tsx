@@ -45,7 +45,7 @@ export default function Header() {
           {/* Logo */}
           <div className="text-lg md:text-xl font-bold tracking-wide">
             <Link href="/">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-600 to-blue-600">
                 Anukul
               </span>
             </Link>
@@ -60,7 +60,7 @@ export default function Header() {
                 className="text-base font-medium text-slate-700 transition-all hover:text-cyan-600 relative group"
               >
                 {link.label}
-                <span className="absolute -bottom-2 left-0 h-0.5 w-0 bg-gradient-to-r from-cyan-600 to-blue-600 transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-2 left-0 h-0.5 w-0 bg-linear-to-r from-cyan-600 to-blue-600 transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
           </nav>
@@ -72,7 +72,7 @@ export default function Header() {
               <button className="relative p-2.5 rounded-xl text-slate-700 hover:text-cyan-600 glass-light hover:bg-white/80 transition-all">
                 <IconShoppingCart size={20} />
                 {cartCount > 0 && (
-                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-gradient-to-r from-cyan-600 to-blue-600 text-white text-xs font-bold rounded-full flex items-center justify-center animate-pulse">
+                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-linear-to-r from-cyan-600 to-blue-600 text-white text-xs font-bold rounded-full flex items-center justify-center animate-pulse">
                     {cartCount}
                   </span>
                 )}

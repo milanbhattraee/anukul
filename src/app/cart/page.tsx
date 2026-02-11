@@ -101,7 +101,7 @@ export default function CartPage() {
   };
 
   return (
-    <div className="min-h-screen pt-24 pb-16 bg-gradient-to-b from-slate-50 to-white">
+    <div className="min-h-screen pt-24 pb-16 bg-linear-to-b from-slate-50 to-white">
       {/* Background Blobs */}
       <div className="ocean-blob ocean-blob-1" />
       <div className="ocean-blob ocean-blob-2" />
@@ -117,7 +117,7 @@ export default function CartPage() {
             <span>Continue Shopping</span>
           </Link>
           <h1 className="text-4xl sm:text-5xl font-bold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-600 via-blue-600 to-indigo-600">
               Shopping Cart
             </span>
           </h1>
@@ -163,7 +163,7 @@ export default function CartPage() {
               Add some products to get started
             </p>
             <Link href="/#products">
-              <button className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-white font-semibold bg-gradient-to-r from-cyan-600 to-blue-600 hover:shadow-lg transition-all">
+              <button className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-white font-semibold bg-linear-to-r from-cyan-600 to-blue-600 hover:shadow-lg transition-all">
                 Browse Products
               </button>
             </Link>
@@ -248,7 +248,7 @@ export default function CartPage() {
                       value={customerName}
                       onChange={(e) => setCustomerName(e.target.value)}
                       className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:ring-2 focus:ring-cyan-400 focus:border-transparent focus:outline-none transition-all"
-                      placeholder="John Doe"
+                      placeholder="Enter your full name"
                       required
                     />
                   </div>
@@ -267,7 +267,7 @@ export default function CartPage() {
                       value={customerPhone}
                       onChange={(e) => setCustomerPhone(e.target.value)}
                       className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:ring-2 focus:ring-cyan-400 focus:border-transparent focus:outline-none transition-all"
-                      placeholder="+977 9812345678"
+                      placeholder="Enter your phone number"
                       required
                     />
                   </div>
@@ -284,7 +284,7 @@ export default function CartPage() {
                   <button
                     onClick={handleSubmitOrder}
                     disabled={isSubmitting || cart.length === 0}
-                    className="w-full mt-6 px-6 py-4 rounded-xl text-white font-semibold bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 shadow-lg hover:shadow-xl transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full mt-6 px-6 py-4 rounded-xl text-white font-semibold bg-linear-to-r from-cyan-600 via-blue-600 to-indigo-600 shadow-lg hover:shadow-xl transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       "Placing Order..."

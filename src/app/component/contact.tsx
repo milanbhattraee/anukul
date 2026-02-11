@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Clock, CheckCircle, AlertCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Map } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -95,7 +95,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-12 sm:py-16 relative overflow-hidden bg-gradient-to-b from-slate-50 to-white">
+    <section id="contact" className="py-12 sm:py-16 relative overflow-hidden bg-linear-to-b from-slate-50 to-white">
       {/* Background Blobs */}
       <div className="ocean-blob ocean-blob-1" />
       <div className="ocean-blob ocean-blob-2" />
@@ -104,7 +104,7 @@ export default function Contact() {
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-600 via-blue-600 to-indigo-600">
               Get In Touch
             </span>
           </h2>
@@ -113,167 +113,166 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Contact Info Cards */}
-         <div className="space-y-6">
-  {/* Contact Card (Phone + Email) */}
-  <div className="glass-light rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 grid grid-cols-1 md:grid-cols-2 gap-6">
-    {/* Phone */}
-    <div className="flex flex-col items-center text-center border-b md:border-b-0 md:border-r border-slate-200 pb-6 md:pb-0 md:pr-6">
-      <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 mb-4 shadow-md">
-        <Phone size={26} className="text-white" />
-      </div>
-      <h3 className="font-semibold text-slate-800 text-lg mb-1">Phone</h3>
-      <p className="text-slate-600">+977 9812345678</p>
-      <p className="text-slate-600">+977 9898765432</p>
-    </div>
-
-    {/* Email */}
-    <div className="flex flex-col items-center text-center pt-6 md:pt-0 md:pl-6">
-      <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 mb-4 shadow-md">
-        <Mail size={26} className="text-white" />
-      </div>
-      <h3 className="font-semibold text-slate-800 text-lg mb-1">Email</h3>
-      <p className="text-slate-600">info@anukul.com</p>
-      <p className="text-slate-600">support@anukul.com</p>
-    </div>
-  </div>
-
-  {/* Location Card */}
-  <div className="glass-light rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center">
-    <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-r from-indigo-600 to-cyan-600 mb-4 shadow-md">
-      <MapPin size={26} className="text-white" />
-    </div>
-    <h3 className="font-semibold text-slate-800 text-lg mb-1">Location</h3>
-    <p className="text-slate-600">Patan, Bagmati Province</p>
-    <p className="text-slate-600">Nepal</p>
-  </div>
-</div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
     
+    {/* LEFT COLUMN: INFO & MAP (4/12 width on desktop) */}
+    <div className="lg:col-span-4 space-y-6 order-2 lg:order-1">
+      
+      {/* Contact & Location Cards Container */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+        {/* Contact Card */}
+        <div className="glass-light rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-linear-to-r from-cyan-600 to-blue-600 mb-4 shadow-md shrink-0">
+            <Phone size={26} className="text-white" />
+          </div>
+          <h3 className="font-bold text-slate-800 text-lg mb-2">Contact Info</h3>
+          <p className="text-slate-600 text-sm sm:text-base">+977 9812345678</p>
+          <p className="text-slate-600 text-sm sm:text-base">anukul@gmail.com</p>
+        </div>
 
-          {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <div className="glass-light rounded-2xl sm:rounded-3xl p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-6">
-                Send us a message
-              </h3>
+        {/* Location Card */}
+        <div className="glass-light rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-linear-to-r from-blue-600 to-indigo-600 mb-4 shadow-md shrink-0">
+            <Map size={26} className="text-white" />
+          </div>
+          <h3 className="font-bold text-slate-800 text-lg mb-2">Our Location</h3>
+          <p className="text-slate-600 text-sm sm:text-base">Birtamode, Jhapa</p>
+          <p className="text-slate-600 text-sm sm:text-base">Nepal</p>
+        </div>
+      </div>
 
-              <div className="space-y-5 sm:space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-                  {/* Name */}
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-slate-700 mb-2"
-                    >
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3.5 text-base rounded-xl bg-white border border-slate-200 focus:ring-2 focus:ring-cyan-400 focus:border-transparent focus:outline-none transition-all touch-manipulation"
-                      placeholder="John Doe"
-                    />
-                  </div>
+      {/* Map Card */}
+      <div className="glass-light rounded-2xl p-3 hover:shadow-xl transition-all duration-300">
+        <div className="w-full h-64 lg:h-72 rounded-xl overflow-hidden border border-slate-200">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3565.44961559477!2d87.98188157523912!3d26.666063676794697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e5ba596f24301d%3A0xc31c039f99602e97!2sBirtamode!5e0!3m2!1sen!2snp!4v1700000000000!5m2!1sen!2snp"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Birtamode, Jhapa Location"
+          />
+        </div>
+        <a
+          href="https://goo.gl/maps/example"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-3 w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold text-cyan-700 bg-cyan-50 hover:bg-cyan-100 transition-all"
+        >
+          <MapPin size={18} />
+          Open in Google Maps
+        </a>
+      </div>
+    </div>
 
-                  {/* Email */}
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-slate-700 mb-2"
-                    >
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3.5 text-base rounded-xl bg-white border border-slate-200 focus:ring-2 focus:ring-cyan-400 focus:border-transparent focus:outline-none transition-all touch-manipulation"
-                      placeholder="john@example.com"
-                    />
-                  </div>
-                </div>
+    {/* RIGHT COLUMN: CONTACT FORM (8/12 width on desktop) */}
+    <div className="lg:col-span-8 order-1 lg:order-2">
+      <div className="glass-light rounded-3xl p-6 sm:p-10 shadow-sm border border-white/20">
+        <div className="mb-8">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">
+            Send us a message
+          </h3>
+          <p className="text-slate-500">We'll get back to you within 24 hours.</p>
+        </div>
 
-                {/* Phone */}
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-medium text-slate-700 mb-2"
-                  >
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3.5 text-base rounded-xl bg-white border border-slate-200 focus:ring-2 focus:ring-cyan-400 focus:border-transparent focus:outline-none transition-all touch-manipulation"
-                    placeholder="+977 9812345678"
-                  />
-                </div>
+        <div className="space-y-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/* Name */}
+            <div className="space-y-2">
+              <label htmlFor="name" className="text-sm font-semibold text-slate-700 ml-1">
+                Full Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full px-4 py-3.5 rounded-xl bg-white border border-slate-200 focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all placeholder:text-slate-400"
+                placeholder="John Doe"
+              />
+            </div>
 
-                {/* Message */}
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-slate-700 mb-2"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={5}
-                    className="w-full px-4 py-3.5 text-base rounded-xl bg-white border border-slate-200 focus:ring-2 focus:ring-cyan-400 focus:border-transparent focus:outline-none transition-all resize-none touch-manipulation"
-                    placeholder="Tell us how we can help you..."
-                  />
-                </div>
-
-                {/* Submit Button */}
-                <button
-                  onClick={handleSubmit}
-                  disabled={isSubmitting}
-                  className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-white font-semibold bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 shadow-lg hover:shadow-xl transition-all duration-300 active:scale-95 touch-manipulation disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? "Sending..." : "Send Message"}
-                  <Send size={20} />
-                </button>
-
-                {/* Status Message */}
-                {submitStatus.type && (
-                  <div
-                    className={`flex items-start gap-3 p-4 rounded-xl ${
-                      submitStatus.type === "success"
-                        ? "bg-green-50 border border-green-200"
-                        : "bg-red-50 border border-red-200"
-                    }`}
-                  >
-                    {submitStatus.type === "success" ? (
-                      <CheckCircle size={20} className="text-green-600 shrink-0 mt-0.5" />
-                    ) : (
-                      <AlertCircle size={20} className="text-red-600 shrink-0 mt-0.5" />
-                    )}
-                    <p
-                      className={`text-sm ${
-                        submitStatus.type === "success" ? "text-green-800" : "text-red-800"
-                      }`}
-                    >
-                      {submitStatus.message}
-                    </p>
-                  </div>
-                )}
-              </div>
+            {/* Email */}
+            <div className="space-y-2">
+              <label htmlFor="email" className="text-sm font-semibold text-slate-700 ml-1">
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full px-4 py-3.5 rounded-xl bg-white border border-slate-200 focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all placeholder:text-slate-400"
+                placeholder="john@example.com"
+              />
             </div>
           </div>
+
+          {/* Phone */}
+          <div className="space-y-2">
+            <label htmlFor="phone" className="text-sm font-semibold text-slate-700 ml-1">
+              Phone Number
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              className="w-full px-4 py-3.5 rounded-xl bg-white border border-slate-200 focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all placeholder:text-slate-400"
+              placeholder="+977 98..."
+            />
+          </div>
+
+          {/* Message */}
+          <div className="space-y-2">
+            <label htmlFor="message" className="text-sm font-semibold text-slate-700 ml-1">
+              Your Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              rows={5}
+              className="w-full px-4 py-3.5 rounded-xl bg-white border border-slate-200 focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all resize-none placeholder:text-slate-400"
+              placeholder="How can we help you?"
+            />
+          </div>
+
+          {/* Submit Button */}
+          <div className="pt-2">
+            <button
+              onClick={handleSubmit}
+              disabled={isSubmitting}
+              className="w-full md:w-auto min-w-50 inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-white font-bold bg-linear-to-r from-cyan-600 via-blue-600 to-indigo-600 shadow-lg shadow-blue-200 hover:shadow-xl hover:-translate-y-0.5 transition-all active:scale-95 disabled:opacity-50"
+            >
+              {isSubmitting ? "Sending..." : "Send Message"}
+              {!isSubmitting && <Send size={20} />}
+            </button>
+          </div>
+
+          {/* Status Message */}
+          {submitStatus.type && (
+            <div className={`mt-4 flex items-center gap-3 p-4 rounded-xl border ${
+              submitStatus.type === "success" 
+                ? "bg-green-50 border-green-200 text-green-800" 
+                : "bg-red-50 border-red-200 text-red-800"
+            }`}>
+              {submitStatus.type === "success" ? <CheckCircle size={20} /> : <AlertCircle size={20} />}
+              <p className="text-sm font-medium">{submitStatus.message}</p>
+            </div>
+          )}
         </div>
+      </div>
+    </div>
+  </div>
+</div>
       </div>
     </section>
   );

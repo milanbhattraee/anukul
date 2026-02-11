@@ -4,7 +4,7 @@ import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Heart } from "lucide
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950">
+    <footer className="relative overflow-hidden bg-linear-to-b from-slate-900 to-slate-950">
       {/* Background Blobs */}
       <div className="footer-blob footer-blob-1" />
       <div className="footer-blob footer-blob-2" />
@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="py-12 sm:py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
           {/* About Section */}
           <div>
-            <h3 className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 mb-3 sm:mb-4">
+            <h3 className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-400 to-indigo-400 mb-3 sm:mb-4">
               Anukul
             </h3>
             <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
@@ -23,19 +23,19 @@ export default function Footer() {
             <div className="flex gap-3 sm:gap-4">
               <a
                 href="#"
-                className="w-11 h-11 sm:w-10 sm:h-10 rounded-full glass-dark flex items-center justify-center hover:bg-gradient-to-r hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 active:scale-95 touch-manipulation"
+                className="w-11 h-11 sm:w-10 sm:h-10 rounded-full glass-dark flex items-center justify-center hover:bg-linear-to-r hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 active:scale-95 touch-manipulation"
               >
                 <Facebook size={20} className="text-slate-300" />
               </a>
               <a
                 href="#"
-                className="w-11 h-11 sm:w-10 sm:h-10 rounded-full glass-dark flex items-center justify-center hover:bg-gradient-to-r hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 active:scale-95 touch-manipulation"
+                className="w-11 h-11 sm:w-10 sm:h-10 rounded-full glass-dark flex items-center justify-center hover:bg-linear-to-r hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 active:scale-95 touch-manipulation"
               >
                 <Instagram size={20} className="text-slate-300" />
               </a>
               <a
                 href="#"
-                className="w-11 h-11 sm:w-10 sm:h-10 rounded-full glass-dark flex items-center justify-center hover:bg-gradient-to-r hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 active:scale-95 touch-manipulation"
+                className="w-11 h-11 sm:w-10 sm:h-10 rounded-full glass-dark flex items-center justify-center hover:bg-linear-to-r hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 active:scale-95 touch-manipulation"
               >
                 <Twitter size={20} className="text-slate-300" />
               </a>
