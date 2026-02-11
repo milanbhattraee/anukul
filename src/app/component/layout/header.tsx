@@ -38,7 +38,7 @@ export default function Header() {
         <div
           className={`mt-2 md:mt-4 h-16 md:h-20 flex items-center justify-between rounded-2xl px-3 md:px-6 transition-all duration-300 ${
             scrolled
-              ? "bg-white/80 backdrop-blur-3xl shadow-lg border border-slate-200/50"
+              ? "bg-white/80 backdrop-blur-3xl shadow-lg "
               : "bg-white/60 backdrop-blur-sm"
           }`}
         >
