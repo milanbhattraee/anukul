@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { MantineProvider } from "@mantine/core";
 import Header from "./component/layout/header";
 import Footer from "./component/layout/footer";
+import { CartProvider } from "./component/cartContext";
 
 
 
@@ -23,9 +23,11 @@ export default function RootLayout({
         className={``}
       >
         <MantineProvider>
+          <CartProvider>
           <Header />
         {children}
         <Footer />
+        </CartProvider>
         </MantineProvider>
       </body>
     </html>

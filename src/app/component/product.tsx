@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { Search, Package, ChevronLeft, ChevronRight } from "lucide-react";
+import { Search, Package, ChevronLeft, ChevronRight, ShoppingCart, Check } from "lucide-react";
 import Image from "next/image";
 
 import products from "../../../asset/product.json";
+import { useCart } from "./cartContext";
 
 const ITEMS_PER_PAGE = 9;
 
@@ -12,6 +13,7 @@ export default function ProductListing() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
+  const { addToCart, isInCart } = useCart();
 
   // Extract unique categories
   const categories = useMemo(() => {
@@ -47,10 +49,14 @@ export default function ProductListing() {
     if (page >= 1 && page <= totalPages) setCurrentPage(page);
   };
 
+  const handleAddToCart = (product: any) => {
+    addToCart(product);
+  };
+
   return (
     <section
       id="products"
-      className="py-16 relative overflow-hidden bg-linear-to-b from-slate-50 to-white"
+      className="py-16 relative overflow-hidden bg-gradient-to-b from-slate-50 to-white"
     >
       {/* Background Blobs */}
       <div className="ocean-blob ocean-blob-1" />
@@ -60,7 +66,7 @@ export default function ProductListing() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold">
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-600 via-blue-600 to-indigo-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600">
               Our Products
             </span>
           </h2>
@@ -103,35 +109,62 @@ export default function ProductListing() {
         {paginatedProducts.length > 0 ? (
           <>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {paginatedProducts.map((product, index) => (
-                <div
-                  key={index}
-                  className="glass-light rounded-2xl p-4 hover:shadow-xl transition-all duration-300 group"
-                >
-                  {/* Image */}
-                  <div className="relative w-full h-48 mb-4 rounded-2xl overflow-hidden bg-white group">
-                    <Image
-                      src={product.imageurl}
-                      alt={product.name}
-                      fill
-                      className="object-contain p-3 transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
+              {paginatedProducts.map((product, index) => {
+                const inCart = isInCart(product.name);
+                
+                return (
+                  <div
+                    key={index}
+                    className="glass-light rounded-2xl p-4 hover:shadow-xl transition-all duration-300 group"
+                  >
+                    {/* Image */}
+                    <div className="relative w-full h-48 mb-4 rounded-2xl overflow-hidden bg-white">
+                      <Image
+                        src={product.imageurl}
+                        alt={product.name}
+                        fill
+                        className="object-contain p-3 transition-transform duration-300 group-hover:scale-105"
+                      />
+                      {inCart && (
+                        <div className="absolute top-2 right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+                          <Check size={18} className="text-white" />
+                        </div>
+                      )}
+                    </div>
 
-                  {/* Product Info */}
-                  <div className="space-y-2">
-                    <span className="inline-block px-2 py-0.5 text-xs font-medium text-cyan-700 bg-cyan-50 rounded-full">
-                      {product.category}
-                    </span>
-                    <h3 className="text-base font-semibold text-slate-800 line-clamp-2">
-                      {product.name}
-                    </h3>
-                    <button className="w-full mt-3 px-4 py-2 rounded-xl text-white font-medium bg-linear-to-r from-cyan-600 to-blue-600 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 text-sm">
-                      View Details
-                    </button>
+                    {/* Product Info */}
+                    <div className="space-y-2">
+                      <span className="inline-block px-2 py-0.5 text-xs font-medium text-cyan-700 bg-cyan-50 rounded-full">
+                        {product.category}
+                      </span>
+                      <h3 className="text-base font-semibold text-slate-800 line-clamp-2 min-h-[3rem]">
+                        {product.name}
+                      </h3>
+                      <button
+                        onClick={() => handleAddToCart(product)}
+                        disabled={inCart}
+                        className={`w-full mt-3 px-4 py-2.5 rounded-xl font-medium transition-all duration-300 text-sm flex items-center justify-center gap-2 ${
+                          inCart
+                            ? "bg-green-500 text-white cursor-default"
+                            : "text-white bg-gradient-to-r from-cyan-600 to-blue-600 hover:shadow-lg hover:-translate-y-0.5 active:scale-95"
+                        }`}
+                      >
+                        {inCart ? (
+                          <>
+                            <Check size={18} />
+                            Added to Cart
+                          </>
+                        ) : (
+                          <>
+                            <ShoppingCart size={18} />
+                            Add to Cart
+                          </>
+                        )}
+                      </button>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Pagination */}
@@ -147,7 +180,7 @@ export default function ProductListing() {
                   <button
                     onClick={() => handlePageChange(currentPage - 1)}
                     disabled={currentPage === 1}
-                    className="p-2 rounded-xl glass-light hover:bg-linear-to-r hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="p-2 rounded-xl glass-light hover:bg-gradient-to-r hover:from-cyan-600 hover:to-blue-600 hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <ChevronLeft size={20} />
                   </button>
@@ -193,8 +226,8 @@ export default function ProductListing() {
                           onClick={() => handlePageChange(page)}
                           className={`px-4 py-2 rounded-xl cursor-pointer font-medium transition-all duration-300 ${
                             currentPage === page
-                              ? "bg-linear-to-r from-cyan-600 to-blue-600 text-white shadow-lg"
-                              : "glass-light hover:from-cyan-600 hover:to-blue-600 hover:bg-cyan-900"
+                              ? "bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg"
+                              : "glass-light hover:bg-cyan-50"
                           }`}
                         >
                           {page}
@@ -206,7 +239,7 @@ export default function ProductListing() {
                   <button
                     onClick={() => handlePageChange(currentPage + 1)}
                     disabled={currentPage === totalPages}
-                    className="p-2 rounded-xl glass-light hover:bg-linear-to-r hover:from-cyan-600 hover:to-blue-600 hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="p-2 rounded-xl glass-light hover:bg-gradient-to-r hover:from-cyan-600 hover:to-blue-600 hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <ChevronRight size={20} />
                   </button>
