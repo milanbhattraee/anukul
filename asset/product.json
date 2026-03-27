@@ -745,11 +745,6 @@
     "category": "medical_equipment"
   },
   {
-    "name": "Wheelchair Cum Stretcher",
-    "imageurl": "/hospital_images/Wheelchair_Cum_Stretcher.jpg",
-    "category": "medical_equipment"
-  },
-  {
     "name": "Air Splint Kit",
     "imageurl": "/hospital_images/Air_Splint_Kit.jpeg",
     "category": "medical_equipment"
@@ -1117,11 +1112,6 @@
   {
     "name": "Weighing Scales WS001",
     "imageurl": "/hospital_images/Weighing_Scales_WS001.jpg",
-    "category": "medical_equipment"
-  },
-  {
-    "name": "Wheelchair Cum Stretcher",
-    "imageurl": "/hospital_images/Wheelchair_Cum_Stretcher.jpg",
     "category": "medical_equipment"
   }
 ]
